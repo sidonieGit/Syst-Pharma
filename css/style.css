@@ -1,0 +1,74 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #edf2f4;
+  margin: 50px;
+}
+
+.flexbox,
+.login-grid {
+  border: 2px solid skyblue;
+  border-radius: 10px;
+  padding: 10px;
+  margin-top: 20px;
+  width: 90%;
+}
+
+/* Grid */
+.grid-container {
+  display: grid;
+  grid-template-columns: 40% 60%;
+  gap: 10px;
+  align-items: center; /* Align items vertically center */
+}
+
+.grid img {
+  width: 80%;
+  margin-top: 0; /* Remove margin to reduce height */
+}
+
+h1 {
+  text-align: center;
+  margin-top: 70px;
+  font-weight: 400px;
+}
+
+form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto auto;
+  grid-template-areas:
+    "l1 i1"
+    "l2 i2"
+    "vi bt";
+  gap: 10px; /* Space between form elements */
+  margin-right: 10px;
+}
+
+input,
+label {
+  margin: 5px 0;
+  border: 1px solid darkblue;
+  padding: 5px;
+  font-size: 1em;
+  font-family: "DMSerif";
+  border-radius: 5px;
+  height: 30px;
+}
+
+#btn-submit {
+  grid-area: bt;
+  cursor: pointer;
+  background: #7adee1;
+  transition: 0.2s;
+  height: 40px;
+}
+
+#btn-submit:hover {
+  background: rgb(225, 225, 234);
+}
