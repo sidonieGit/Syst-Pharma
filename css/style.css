@@ -72,3 +72,93 @@ label {
 #btn-submit:hover {
   background: rgb(225, 225, 234);
 }
+
+/* Médias queries pour écrans petits (max-width: 700px) */
+@media screen and (max-width: 700px) {
+  .login-grid {
+    border: none;
+  }
+  .grid-container {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "img"
+      "form";
+  }
+
+  .grid img {
+    max-width: 200px; /* Réduit la largeur de l'image pour les petits écrans */
+  }
+
+  form {
+    max-width: 100%; /* Assure que le formulaire utilise toute la largeur disponible */
+  }
+
+  input,
+  label {
+    font-size: 0.9em; /* Réduit la taille de la police pour les petits écrans */
+    padding: 8px; /* Réduit le padding pour plus d'espace */
+  }
+
+  #btn-submit {
+    height: 35px; /* Ajuste la hauteur du bouton pour les petits écrans */
+  }
+}
+
+/* Médias queries pour écrans petits (max-width: 700px) */
+@media screen and (max-width: 700px) {
+  .login-grid {
+    border: none;
+  }
+  .grid-container {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "img"
+      "form";
+  }
+
+  .grid img {
+    max-width: 200px; /* Réduit la largeur de l'image pour les petits écrans */
+  }
+
+  form {
+    max-width: 100%; /* Assure que le formulaire utilise toute la largeur disponible */
+  }
+
+  input,
+  label {
+    font-size: 0.9em; /* Réduit la taille de la police pour les petits écrans */
+    padding: 8px; /* Réduit le padding pour plus d'espace */
+  }
+
+  #btn-submit {
+    height: 35px; /* Ajuste la hauteur du bouton pour les petits écrans */
+  }
+}
+
+/* Médias queries pour écrans très petits (max-width: 360px) */
+@media screen and (max-width: 360px) {
+  .grid-container {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "img"
+      "form";
+  }
+
+  .grid img {
+    max-width: 150px; /* Réduit encore plus la largeur de l'image pour les très petits écrans */
+  }
+
+  form {
+    max-width: 100%; /* Assure que le formulaire utilise toute la largeur disponible */
+  }
+
+  input,
+  label {
+    font-size: 0.8em; /* Réduit encore plus la taille de la police */
+    padding: 6px; /* Réduit encore plus le padding */
+  }
+
+  #btn-submit {
+    height: 30px; /* Ajuste la hauteur du bouton pour les très petits écrans */
+  }
+}
