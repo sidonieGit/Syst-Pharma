@@ -7,7 +7,7 @@
 body {
   font-family: Arial, sans-serif;
   background-color: #edf2f4;
-  margin: 50px;
+  /* margin: 50px; */
 }
 
 .login-grid {
@@ -32,9 +32,9 @@ body {
 }
 
 img {
-  width: 50%;
-  height: 50%;
-  margin-top: 0; /* Remove margin to reduce height */
+  width: 60%;
+  height: 60%;
+  margin: auto; /* Remove margin to reduce height */
 }
 
 h1 {
@@ -102,7 +102,8 @@ label {
   }
 
   .child2 {
-    margin: auto;
+    /* margin: auto; */
+    width: 100%;
   }
   form {
     display: grid;
