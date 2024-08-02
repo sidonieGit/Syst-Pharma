@@ -10,25 +10,30 @@ body {
   margin: 50px;
 }
 
-.flexbox,
 .login-grid {
-  border: 2px solid skyblue;
+  /* border: 2px solid skyblue; */
   border-radius: 10px;
-  padding: 10px;
-  margin-top: 20px;
-  width: 90%;
+  margin: auto;
+  width: 70%;
+  height: 100%;
 }
 
 /* Grid */
 .grid-container {
-  display: grid;
-  grid-template-columns: 40% 60%;
+  border-radius: 10%;
+  margin: auto;
+  background-color: #7adee1;
+  width: 70%;
+  height: 300px;
+  display: flex;
+  grid-template-columns: 50% 50%;
   gap: 10px;
   align-items: center; /* Align items vertically center */
 }
 
-.grid img {
-  width: 80%;
+img {
+  width: 50%;
+  height: 50%;
   margin-top: 0; /* Remove margin to reduce height */
 }
 
@@ -46,18 +51,24 @@ form {
     "l1 i1"
     "l2 i2"
     "vi bt";
-  gap: 10px; /* Space between form elements */
-  margin-right: 10px;
+  gap: 1px; /* Space between form elements */
+  margin: 10px;
 }
 
-input,
-label {
+input {
   margin: 5px 0;
   border: 1px solid darkblue;
   padding: 5px;
   font-size: 1em;
   font-family: "DMSerif";
   border-radius: 5px;
+  height: 30px;
+}
+label {
+  margin: 5px 0;
+  padding: 5px;
+  font-size: 1em;
+  font-family: "DMSerif";
   height: 30px;
 }
 
@@ -74,91 +85,36 @@ label {
 }
 
 /* Médias queries pour écrans petits (max-width: 700px) */
-@media screen and (max-width: 700px) {
-  .login-grid {
-    border: none;
-  }
+@media screen and (max-width: 900px) {
   .grid-container {
-    grid-template-columns: 1fr;
-    grid-template-areas:
-      "img"
-      "form";
+    margin: auto;
+    padding: auto;
+    background-color: #7adee1;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    height: auto;
   }
 
-  .grid img {
-    max-width: 200px; /* Réduit la largeur de l'image pour les petits écrans */
+  .img {
+    width: 100%;
+    margin: auto;
   }
 
+  .child2 {
+    margin: auto;
+  }
   form {
-    max-width: 100%; /* Assure que le formulaire utilise toute la largeur disponible */
-  }
-
-  input,
-  label {
-    font-size: 0.9em; /* Réduit la taille de la police pour les petits écrans */
-    padding: 8px; /* Réduit le padding pour plus d'espace */
-  }
-
-  #btn-submit {
-    height: 35px; /* Ajuste la hauteur du bouton pour les petits écrans */
-  }
-}
-
-/* Médias queries pour écrans petits (max-width: 700px) */
-@media screen and (max-width: 700px) {
-  .login-grid {
-    border: none;
-  }
-  .grid-container {
+    display: grid;
     grid-template-columns: 1fr;
+    grid-template-rows: auto;
     grid-template-areas:
-      "img"
-      "form";
-  }
-
-  .grid img {
-    max-width: 200px; /* Réduit la largeur de l'image pour les petits écrans */
-  }
-
-  form {
-    max-width: 100%; /* Assure que le formulaire utilise toute la largeur disponible */
-  }
-
-  input,
-  label {
-    font-size: 0.9em; /* Réduit la taille de la police pour les petits écrans */
-    padding: 8px; /* Réduit le padding pour plus d'espace */
-  }
-
-  #btn-submit {
-    height: 35px; /* Ajuste la hauteur du bouton pour les petits écrans */
-  }
-}
-
-/* Médias queries pour écrans très petits (max-width: 360px) */
-@media screen and (max-width: 360px) {
-  .grid-container {
-    grid-template-columns: 1fr;
-    grid-template-areas:
-      "img"
-      "form";
-  }
-
-  .grid img {
-    max-width: 150px; /* Réduit encore plus la largeur de l'image pour les très petits écrans */
-  }
-
-  form {
-    max-width: 100%; /* Assure que le formulaire utilise toute la largeur disponible */
-  }
-
-  input,
-  label {
-    font-size: 0.8em; /* Réduit encore plus la taille de la police */
-    padding: 6px; /* Réduit encore plus le padding */
-  }
-
-  #btn-submit {
-    height: 30px; /* Ajuste la hauteur du bouton pour les très petits écrans */
+      "l1"
+      "i1"
+      "l2"
+      "i2"
+      "bt";
+    gap: 1px; /* Space between form elements */
+    margin: 10px;
   }
 }
